@@ -7,7 +7,7 @@ public class RenameFile {
 	public static void main(String[] args) {
 
 		RenameFile rename = new RenameFile();
-		String path = "경로입력";
+		String path = "경로설정";
 		rename.renameFileList(rename.fileList(path));
 
 	}
@@ -25,6 +25,13 @@ public class RenameFile {
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
 					break;
+				}
+			} else {
+				File[] list = file.listFiles();
+				if (list.length > 0) {
+					renameFileList(list);
+				} else {
+					file.delete();
 				}
 			}
 		}
