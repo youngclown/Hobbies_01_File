@@ -7,7 +7,8 @@ public class RenameFile {
 	public static void main(String[] args) {
 
 		RenameFile rename = new RenameFile();
-		rename.renameFileList(rename.fileList("D:\\novel\\download"));
+		String path = "경로입력";
+		rename.renameFileList(rename.fileList(path));
 
 	}
 
